@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web3 Event Indexer Live Feed</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="app-shell terminal-shell">
+      <header class="hero-panel glass-card">
+        <div>
+          <p class="eyebrow">Web3 Event Indexer</p>
+          <h1>Live Terminal Feed</h1>
+          <p>Showing the current indexed event stream from Sepolia in real time.</p>
+          <div class="endpoint-info">
+            <span>GraphQL endpoint:</span>
+            <code id="graphqlEndpoint">/graphql</code>
+          </div>
+        </div>
+        <button id="refreshButton" class="btn btn-primary" type="button">Refresh</button>
+      </header>
+
+      <section class="terminal-panel glass-card">
+        <div class="terminal-header">
+          <span class="terminal-dot dot-red"></span>
+          <span class="terminal-dot dot-yellow"></span>
+          <span class="terminal-dot dot-green"></span>
+          <span class="terminal-label">Live Data Terminal</span>
+        </div>
+
+        <div id="terminalOutput" class="terminal-output"></div>
+        <div id="terminalFooter" class="terminal-footer">
+          <span id="statusText">Connecting...</span>
+          <span id="lastUpdated">Last updated: --</span>
+        </div>
+
+      </section>
+
+      <footer class="dashboard-footer glass-card">
+        <p>Powered by Ponder + Sepolia</p>
+      </footer>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

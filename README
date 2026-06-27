@@ -1,0 +1,138 @@
+# 🚀 Ponder Sepolia Event Indexer
+
+A blockchain event indexing project built with **Ponder**, **Solidity**, **GraphQL**, and **JavaScript**.
+
+This project demonstrates how to index smart contract events deployed on the Sepolia testnet and expose them through a GraphQL API with a simple frontend dashboard.
+
+---
+
+## 📌 Features
+
+- Smart contract deployed on Sepolia
+- Event indexing using Ponder
+- GraphQL API for querying indexed data
+- Responsive frontend dashboard
+- Search indexed messages
+- Track Created, Updated, and Deleted events
+- Real-time indexing during development
+
+---
+
+## 🛠 Tech Stack
+
+- Solidity
+- Ponder
+- GraphQL
+- TypeScript
+- JavaScript
+- HTML & CSS
+- Sepolia Testnet
+- Alchemy RPC
+
+---
+
+## 📂 Project Structure
+
+```
+.
+├── abis/                 # Smart contract ABI
+├── frontend/             # HTML/CSS/JS dashboard
+├── generated/            # Auto-generated Ponder files
+├── src/                  # Event handlers
+├── ponder.config.ts      # Ponder configuration
+├── ponder.schema.ts      # Database schema
+├── package.json
+└── README.md
+```
+
+---
+
+## 📦 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/<username>/ponder-sepolia-indexer.git
+
+cd ponder-sepolia-indexer
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+## ⚙ Environment Variables
+
+Create a `.env.local` file.
+
+```env
+PONDER_RPC_URL_1=https://eth-sepolia.g.alchemy.com/v2/YOUR_API_KEY
+```
+
+---
+
+## ▶ Start the Project
+
+Run the Ponder indexer
+
+```bash
+npm run dev
+```
+
+Ponder will start
+
+- GraphQL Server
+- Database
+- Event Indexer
+
+GraphQL Playground
+
+```
+http://localhost:42069/graphql
+```
+
+---
+
+## 🔎 Sample GraphQL Query
+
+```graphql
+{
+  messagess(limit: 10) {
+    items {
+      id
+      author
+      content
+      timestamp
+      exists
+    }
+  }
+}
+```
+
+---
+
+## 📷 Screenshots
+
+### Frontend Dashboard
+
+>
+
+![Frontend](./screenshots/frontend.png)
+
+---
+
+### GraphQL Playground
+
+> 
+
+![GraphQL](./screenshots/graphql.png)
+
+---
+
+## 📄 License
+
+MIT License
