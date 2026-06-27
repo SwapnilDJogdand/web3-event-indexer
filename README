@@ -1,53 +1,60 @@
 # 🚀 Ponder Sepolia Event Indexer
 
-A blockchain event indexing project built with **Ponder**, **Solidity**, **GraphQL**, and **JavaScript**.
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)
+![Ponder](https://img.shields.io/badge/Ponder-Event%20Indexer-black)
+![GraphQL](https://img.shields.io/badge/GraphQL-API-E10098?logo=graphql)
+![Solidity](https://img.shields.io/badge/Solidity-Smart%20Contracts-363636?logo=solidity)
 
-This project demonstrates how to index smart contract events deployed on the Sepolia testnet and expose them through a GraphQL API with a simple frontend dashboard.
+A full-stack blockchain event indexing application built with **Ponder**, **Solidity**, **GraphQL**, and **TypeScript**.
 
----
-
-## 📌 Features
-
-- Smart contract deployed on Sepolia
-- Event indexing using Ponder
-- GraphQL API for querying indexed data
-- Responsive frontend dashboard
-- Search indexed messages
-- Track Created, Updated, and Deleted events
-- Real-time indexing during development
+The project listens to smart contract events deployed on the **Ethereum Sepolia Testnet**, indexes them into a local database, exposes the indexed data through a **GraphQL API**, and displays everything in a responsive frontend dashboard.
 
 ---
 
-## 🛠 Tech Stack
+## ✨ Features
 
-- Solidity
-- Ponder
-- GraphQL
-- TypeScript
-- JavaScript
-- HTML & CSS
-- Sepolia Testnet
-- Alchemy RPC
+* 📦 Smart contract deployed on Sepolia
+* ⚡ Real-time event indexing with Ponder
+* 🔍 Query indexed data using GraphQL
+* 📊 Responsive frontend dashboard
+* 🔎 Search indexed messages
+* 📝 Track Create, Update, and Delete events
+* 🗄 Automatic database synchronization
+
+---
+
+## 🏗 Tech Stack
+
+| Technology | Purpose          |
+| ---------- | ---------------- |
+| Solidity   | Smart Contract   |
+| Ponder     | Event Indexer    |
+| GraphQL    | API Layer        |
+| TypeScript | Backend          |
+| JavaScript | Frontend Logic   |
+| HTML & CSS | User Interface   |
+| Sepolia    | Ethereum Testnet |
+| Alchemy    | RPC Provider     |
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 .
-├── abis/                 # Smart contract ABI
-├── frontend/             # HTML/CSS/JS dashboard
-├── generated/            # Auto-generated Ponder files
-├── src/                  # Event handlers
-├── ponder.config.ts      # Ponder configuration
-├── ponder.schema.ts      # Database schema
+├── abis/               # Smart contract ABI
+├── frontend/           # Dashboard
+├── generated/          # Auto-generated Ponder files
+├── src/                # Event handlers
+├── ponder.config.ts
+├── ponder.schema.ts
 ├── package.json
 └── README.md
 ```
 
 ---
 
-## 📦 Installation
+## ⚙️ Installation
 
 Clone the repository
 
@@ -65,7 +72,7 @@ npm install
 
 ---
 
-## ⚙ Environment Variables
+## 🔑 Environment Variables
 
 Create a `.env.local` file.
 
@@ -75,33 +82,31 @@ PONDER_RPC_URL_1=https://eth-sepolia.g.alchemy.com/v2/YOUR_API_KEY
 
 ---
 
-## ▶ Start the Project
-
-Run the Ponder indexer
+## ▶️ Run the Project
 
 ```bash
 npm run dev
 ```
 
-Ponder will start
+This starts:
 
-- GraphQL Server
-- Database
-- Event Indexer
+* Event Indexer
+* GraphQL Server
+* Local Database
 
 GraphQL Playground
 
-```
+```text
 http://localhost:42069/graphql
 ```
 
 ---
 
-## 🔎 Sample GraphQL Query
+## 🔍 Example GraphQL Query
 
 ```graphql
 {
-  messagess(limit: 10) {
+  messages(limit: 10) {
     items {
       id
       author
@@ -115,24 +120,48 @@ http://localhost:42069/graphql
 
 ---
 
-## 📷 Screenshots
+## 📸 Screenshots
 
-### Frontend Dashboard
+### Dashboard
 
->
-
-![Frontend](./screenshots/frontend.png)
-
----
+![Dashboard](./screenshots/frontend.png)
 
 ### GraphQL Playground
 
-> 
-
-![GraphQL](./screenshots/graphql.png)
+![GraphQL Playground](./screenshots/graphql.png)
 
 ---
 
-## 📄 License
+## 🔄 Project Workflow
 
-MIT License
+```text
+Smart Contract
+      │
+      ▼
+Contract Events
+      │
+      ▼
+Ponder Indexer
+      │
+      ▼
+Local Database
+      │
+      ▼
+GraphQL API
+      │
+      ▼
+Frontend Dashboard
+```
+
+---
+
+## 🚀 Future Improvements
+
+* Wallet authentication
+* Pagination
+* Filtering & sorting
+* Docker support
+* Deployment guide
+* Unit and integration tests
+
+---
